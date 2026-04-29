@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Players - Tennis Clash</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/players.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Tennis Clash Logo" />
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" data-page="home">🏠 Home</a></li>
+                <li><a href="players.html" class="nav-link active" data-page="players">🎾 Players</a></li>
+                <li><a href="grandslam.html" class="nav-link" data-page="grandslam">⭐ Grand Slam</a></li>
+                <li><a href="index.html#about">ℹ️ About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-primary">SIGN UP NOW!</button>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Character Detail Page -->
+    <main class="character-detail">
+        <div class="character-container">
+            <!-- Character Name & Description -->
+            <div class="character-header-section">
+                <div class="character-name-wrapper">
+                    <div class="star-decoration left">✨</div>
+                    <h1 class="character-name" id="displayName">1. ARYNA SABALENKA</h1>
+                    <div class="star-decoration right">✨</div>
+                </div>
+                <p class="character-description" id="displayDescription">A very powerful player who likes to attack early in rallies. She uses strong serves and big groundstrokes to pressure her opponents.</p>
+            </div>
+
+            <!-- Variant Circles (Top Right) -->
+            <div class="variant-selectors">
+                <div class="variant-circle active" data-variant="0">
+                    <img src="" alt="" class="variant-image" />
+                </div>
+                <div class="variant-circle" data-variant="1" id="racketButton">
+                    <img src="" alt="" class="variant-image" />
+                </div>
+                <div class="variant-circle" data-variant="2">
+                    <img src="" alt="" class="variant-image" />
+                </div>
+            </div>
+
+            <!-- Main Display -->
+            <div class="character-main-display">
+                <div class="character-blob-background"></div>
+                <div class="character-main-image" id="mainImageContainer">
+                    <img src="" alt="" class="main-player-image" id="mainImage" />
+                </div>
+            </div>
+
+            <!-- Related Characters (Left Side) -->
+            <div class="related-characters left-side">
+                <!-- Injected by JS -->
+            </div>
+
+            <!-- Related Characters (Right Side) -->
+            <div class="related-characters right-side">
+                <!-- Injected by JS -->
+            </div>
+
+            <!-- More Info Button -->
+            <div class="more-info-button">
+                <button class="more-info-btn" id="moreInfoBtn">
+                    <span>MORE INFO</span>
+                    <span class="arrow">▶</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="Tennis Clash" />
+                <p>© 2026 Tennis Clash. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/players.js"></script>
+</body>
+</html>
