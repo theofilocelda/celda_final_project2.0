@@ -131,6 +131,36 @@
         .code-body .val { color: #98c379; }
         .code-body .attr { color: #56b6c2; }
 
+        /* profile picture */
+        .hero-visual { position: relative; padding: 20px 0 60px 20px; }
+        .profile-wrap {
+            position: relative; width: min(340px, 80%); margin-left: auto;
+            aspect-ratio: 4 / 5;
+        }
+        .profile-wrap::before {
+            content: ''; position: absolute; inset: 0;
+            transform: translate(18px, 18px);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+        }
+        .profile-photo {
+            position: relative; width: 100%; height: 100%;
+            border-radius: 16px; overflow: hidden;
+            background: var(--cream); z-index: 1;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif; font-size: 6rem;
+            font-weight: 900; color: var(--accent);
+        }
+        .profile-photo img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; object-position: center top;
+        }
+        .hero-visual .code-block {
+            position: absolute; left: -10px; bottom: 0; z-index: 4;
+            width: 270px; box-shadow: 10px 10px 0 var(--border);
+        }
+        .hero-visual .code-body { padding: 14px 18px; font-size: 0.72rem; line-height: 1.7; }
+
         /* ── SECTION COMMONS ── */
         section { padding: 100px 2rem; }
         .section-inner { max-width: 1200px; margin: 0 auto; }
@@ -287,6 +317,8 @@
             .projects-grid { grid-template-columns: 1fr; }
             .project-card.featured { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
+            .profile-wrap { margin: 0 auto; }
+            .hero-visual .code-block { left: 50%; transform: translateX(-50%); }
         }
         @media (max-width: 600px) {
             .nav-links { display: none; }
@@ -325,6 +357,13 @@
                 </div>
             </div>
             <div class="hero-visual">
+                <div class="profile-wrap">
+                    <div class="profile-photo">
+                        TC
+                        <img src="assets/profile.png" alt="Portrait of Teofilo Celda Jr."
+                             onerror="this.remove()">
+                    </div>
+                </div>
                 <div class="code-block">
                     <div class="code-header">
                         <span class="dot r"></span>
@@ -334,10 +373,7 @@
                     <div class="code-body">
                         <span class="tag">&lt;developer&gt;</span><br>
                         &nbsp;&nbsp;<span class="tag">&lt;name&gt;</span><span class="val">Teofilo</span><span class="tag">&lt;/name&gt;</span><br>
-                        &nbsp;&nbsp;<span class="tag">&lt;role&gt;</span><span class="val">Web Developer</span><span class="tag">&lt;/role&gt;</span><br>
-                        &nbsp;&nbsp;<span class="tag">&lt;skills&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">HTML, CSS, JS, Figma</span><br>
-                        &nbsp;&nbsp;<span class="tag">&lt;/skills&gt;</span><br>
+                        &nbsp;&nbsp;<span class="tag">&lt;skills&gt;</span><span class="attr">HTML, CSS, JS, Figma</span><span class="tag">&lt;/skills&gt;</span><br>
                         &nbsp;&nbsp;<span class="tag">&lt;status&gt;</span><span class="val">Available</span><span class="tag">&lt;/status&gt;</span><br>
                         <span class="tag">&lt;/developer&gt;</span>
                     </div>
@@ -388,28 +424,6 @@
             <div class="projects-grid">
 
                 <!-- Featured -->
-                <!-- Tennis Clash -->
-                <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="assets/tennisclash/tennisclashmainpage.png" alt="Tennis Clash">
-                        <div class="project-overlay">
-                            <a href="html/tennis-clash.html" class="btn-view">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-logo-wrap">
-                            <img src="assets/logo/tennisclashlogo.png" alt="Tennis Clash Logo" class="project-logo">
-                        </div>
-                        <h3>Tennis Clash</h3>
-                        <p>Browse top women's tennis rankings, explore player gear and rackets, and discover major Grand Slam tournaments.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <a href="html/tennis-clash.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
 
                 <!-- Homegrowns -->
                 <div class="project-card">
