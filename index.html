@@ -148,7 +148,7 @@
         /* ── SKILLS ── */
         .skills-section { background: var(--cream); }
         .skills-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
         }
         .skill-card {
             background: var(--card-bg); border: 1.5px solid var(--border);
@@ -164,6 +164,7 @@
         .badge-html { background: #fff4f0; color: #c8472b; border: 1px solid #f5c4b8; }
         .badge-css { background: #f0f4ff; color: #2b4bc8; border: 1px solid #b8c4f5; }
         .badge-js { background: #fffbf0; color: #a87e00; border: 1px solid #f5e8b8; }
+        .badge-figma { background: #f7f0ff; color: #7a3fd1; border: 1px solid #d9c4f5; }
         .skill-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
         .skill-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
         .progress-bar {
@@ -270,16 +271,19 @@
         }
 
         /* ── RESPONSIVE ── */
+        @media (max-width: 1100px) {
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 900px) {
             .hero-inner { grid-template-columns: 1fr; }
             .hero::before { display: none; }
-            .skills-grid { grid-template-columns: 1fr; }
             .projects-grid { grid-template-columns: 1fr; }
             .project-card.featured { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
             .nav-links { display: none; }
+            .skills-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -325,7 +329,7 @@
                         &nbsp;&nbsp;<span class="tag">&lt;name&gt;</span><span class="val">Teofilo</span><span class="tag">&lt;/name&gt;</span><br>
                         &nbsp;&nbsp;<span class="tag">&lt;role&gt;</span><span class="val">Web Developer</span><span class="tag">&lt;/role&gt;</span><br>
                         &nbsp;&nbsp;<span class="tag">&lt;skills&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">HTML, CSS, JS</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">HTML, CSS, JS, Figma</span><br>
                         &nbsp;&nbsp;<span class="tag">&lt;/skills&gt;</span><br>
                         &nbsp;&nbsp;<span class="tag">&lt;status&gt;</span><span class="val">Available</span><span class="tag">&lt;/status&gt;</span><br>
                         <span class="tag">&lt;/developer&gt;</span>
@@ -358,6 +362,12 @@
                     <h3>JavaScript</h3>
                     <p>Adding interactivity and dynamic features to enhance user experience across all devices.</p>
                     <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-badge badge-figma">Figma</span>
+                    <h3>Figma</h3>
+                    <p>Sketching how a website should look and feel before any code is written, and turning those ideas into simple mockups.</p>
+                    <div class="progress-bar"><div class="progress" style="width:65%"></div></div>
                 </div>
             </div>
         </div>
