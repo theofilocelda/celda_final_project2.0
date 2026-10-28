@@ -236,6 +236,13 @@
             transition: letter-spacing 0.2s;
         }
         .project-link:hover { letter-spacing: 0.08em; }
+        .project-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+        .project-link-live {
+            font-size: 0.85rem; font-weight: 600; color: var(--accent2);
+            text-decoration: none; letter-spacing: 0.02em;
+            transition: letter-spacing 0.2s;
+        }
+        .project-link-live:hover { letter-spacing: 0.08em; }
 
         /* ── CONTACT ── */
         .contact-section { background: var(--ink); color: var(--paper); }
@@ -423,7 +430,10 @@
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                         </div>
-                        <a href="html/the-homegrowns.html" class="project-link">Learn More →</a>
+                        <div class="project-links">
+                            <a href="html/the-homegrowns.html" class="project-link">Learn More →</a>
+                            <a href="https://testinghomegrowns.vercel.app/index.html" class="project-link-live" target="_blank" rel="noopener noreferrer">Visit Live Website ↗</a>
+                        </div>
                     </div>
                 </div>
 
